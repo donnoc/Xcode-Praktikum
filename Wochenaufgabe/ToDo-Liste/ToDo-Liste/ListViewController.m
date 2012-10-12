@@ -35,10 +35,10 @@
 										  andGps: CLLocationCoordinate2DMake(111, 222)
 					   ];
 	Task* secondTask = [[Task alloc] initWithName:@"ein anderer Name"
-										 andDate:@"21.02.2003"
-								  andDescription:@"Bla bla bla"
-										  andUrl:[[NSURL alloc] initFileURLWithPath:@"http://www.web.de"]
-										  andGps: CLLocationCoordinate2DMake(111, 222)
+										  andDate:@"09.02.2003"
+								   andDescription:@"Blubb blubb blubb"
+										   andUrl:[[NSURL alloc] initFileURLWithPath:@"http://www.gmx.de"]
+										   andGps: CLLocationCoordinate2DMake(999, 999)
 					   ];
 	
 	
@@ -131,6 +131,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
+	// set the View Title
 	self.title = @"ToDo Liste";
 	
 }
