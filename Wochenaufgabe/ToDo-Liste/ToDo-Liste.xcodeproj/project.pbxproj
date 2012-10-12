@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BA08CC8162851F500B3ED4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA08CC7162851F500B3ED4A /* UIKit.framework */; };
+		6BA08CCA162851F500B3ED4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA08CC9162851F500B3ED4A /* Foundation.framework */; };
+		6BA08CCC162851F500B3ED4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA08CCB162851F500B3ED4A /* CoreGraphics.framework */; };
+		6BA08CD2162851F500B3ED4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BA08CD0162851F500B3ED4A /* InfoPlist.strings */; };
+		6BA08CD4162851F500B3ED4A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA08CD3162851F500B3ED4A /* main.m */; };
+		6BA08CD8162851F500B3ED4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA08CD7162851F500B3ED4A /* AppDelegate.m */; };
+		6BA08CDB162851F500B3ED4A /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA08CDA162851F500B3ED4A /* ListViewController.m */; };
+		6BA08CDE162851F500B3ED4A /* ListViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA08CDC162851F500B3ED4A /* ListViewController_iPhone.xib */; };
+		6BA08CE1162851F500B3ED4A /* ListViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA08CDF162851F500B3ED4A /* ListViewController_iPad.xib */; };
+		6BA08CEA1628532E00B3ED4A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA08CE81628532E00B3ED4A /* DetailViewController.m */; };
+		6BA08CEB1628532E00B3ED4A /* DetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA08CE91628532E00B3ED4A /* DetailViewController_iPhone.xib */; };
+		6BA08CEF162853AB00B3ED4A /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA08CED162853AB00B3ED4A /* CreateViewController.m */; };
+		6BA08CF0162853AB00B3ED4A /* CreateViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA08CEE162853AB00B3ED4A /* CreateViewController_iPhone.xib */; };
+		6BA08CF4162853FE00B3ED4A /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA08CF2162853FE00B3ED4A /* WebViewController.m */; };
+		6BA08CF5162853FE00B3ED4A /* WebViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA08CF3162853FE00B3ED4A /* WebViewController_iPhone.xib */; };
+		6BA08CF91628543D00B3ED4A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA08CF71628543D00B3ED4A /* MapViewController.m */; };
+		6BA08CFA1628543D00B3ED4A /* MapViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA08CF81628543D00B3ED4A /* MapViewController_iPhone.xib */; };
+		6BA08CFC16285B4300B3ED4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA08CFB16285B4300B3ED4A /* CoreLocation.framework */; };
+		6BA08CFE16285B6400B3ED4A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA08CFD16285B6400B3ED4A /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6BA08CC3162851F500B3ED4A /* ToDo-Liste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-Liste.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BA08CC7162851F500B3ED4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6BA08CC9162851F500B3ED4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BA08CCB162851F500B3ED4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6BA08CCF162851F500B3ED4A /* ToDo-Liste-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDo-Liste-Info.plist"; sourceTree = "<group>"; };
+		6BA08CD1162851F500B3ED4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BA08CD3162851F500B3ED4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BA08CD5162851F500B3ED4A /* ToDo-Liste-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ToDo-Liste-Prefix.pch"; sourceTree = "<group>"; };
+		6BA08CD6162851F500B3ED4A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6BA08CD7162851F500B3ED4A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6BA08CD9162851F500B3ED4A /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		6BA08CDA162851F500B3ED4A /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		6BA08CDD162851F500B3ED4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ListViewController_iPhone.xib; sourceTree = "<group>"; };
+		6BA08CE0162851F500B3ED4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ListViewController_iPad.xib; sourceTree = "<group>"; };
+		6BA08CE71628532E00B3ED4A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6BA08CE81628532E00B3ED4A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		6BA08CE91628532E00B3ED4A /* DetailViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		6BA08CEC162853AB00B3ED4A /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
+		6BA08CED162853AB00B3ED4A /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
+		6BA08CEE162853AB00B3ED4A /* CreateViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateViewController_iPhone.xib; sourceTree = "<group>"; };
+		6BA08CF1162853FE00B3ED4A /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		6BA08CF2162853FE00B3ED4A /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		6BA08CF3162853FE00B3ED4A /* WebViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController_iPhone.xib; sourceTree = "<group>"; };
+		6BA08CF61628543C00B3ED4A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6BA08CF71628543D00B3ED4A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6BA08CF81628543D00B3ED4A /* MapViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController_iPhone.xib; sourceTree = "<group>"; };
+		6BA08CFB16285B4300B3ED4A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6BA08CFD16285B6400B3ED4A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BA08CC0162851F500B3ED4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BA08CFE16285B6400B3ED4A /* MapKit.framework in Frameworks */,
+				6BA08CFC16285B4300B3ED4A /* CoreLocation.framework in Frameworks */,
+				6BA08CC8162851F500B3ED4A /* UIKit.framework in Frameworks */,
+				6BA08CCA162851F500B3ED4A /* Foundation.framework in Frameworks */,
+				6BA08CCC162851F500B3ED4A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BA08CB8162851F500B3ED4A = {
+			isa = PBXGroup;
+			children = (
+				6BA08CFD16285B6400B3ED4A /* MapKit.framework */,
+				6BA08CFB16285B4300B3ED4A /* CoreLocation.framework */,
+				6BA08CCD162851F500B3ED4A /* ToDo-Liste */,
+				6BA08CC6162851F500B3ED4A /* Frameworks */,
+				6BA08CC4162851F500B3ED4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BA08CC4162851F500B3ED4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CC3162851F500B3ED4A /* ToDo-Liste.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BA08CC6162851F500B3ED4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CC7162851F500B3ED4A /* UIKit.framework */,
+				6BA08CC9162851F500B3ED4A /* Foundation.framework */,
+				6BA08CCB162851F500B3ED4A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BA08CCD162851F500B3ED4A /* ToDo-Liste */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CD6162851F500B3ED4A /* AppDelegate.h */,
+				6BA08CD7162851F500B3ED4A /* AppDelegate.m */,
+				6BA08CFF16285D8600B3ED4A /* DetailViewController */,
+				6BA08D0016285D9800B3ED4A /* CreateViewController */,
+				6BA08D0116285DA400B3ED4A /* WebViewController */,
+				6BA08D0216285DAE00B3ED4A /* MapViewController */,
+				6BA08D0316285DC100B3ED4A /* ListViewController */,
+				6BA08CCE162851F500B3ED4A /* Supporting Files */,
+			);
+			path = "ToDo-Liste";
+			sourceTree = "<group>";
+		};
+		6BA08CCE162851F500B3ED4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CCF162851F500B3ED4A /* ToDo-Liste-Info.plist */,
+				6BA08CD0162851F500B3ED4A /* InfoPlist.strings */,
+				6BA08CD3162851F500B3ED4A /* main.m */,
+				6BA08CD5162851F500B3ED4A /* ToDo-Liste-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BA08CFF16285D8600B3ED4A /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CE71628532E00B3ED4A /* DetailViewController.h */,
+				6BA08CE81628532E00B3ED4A /* DetailViewController.m */,
+				6BA08CE91628532E00B3ED4A /* DetailViewController_iPhone.xib */,
+			);
+			name = DetailViewController;
+			sourceTree = "<group>";
+		};
+		6BA08D0016285D9800B3ED4A /* CreateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CEC162853AB00B3ED4A /* CreateViewController.h */,
+				6BA08CED162853AB00B3ED4A /* CreateViewController.m */,
+				6BA08CEE162853AB00B3ED4A /* CreateViewController_iPhone.xib */,
+			);
+			name = CreateViewController;
+			sourceTree = "<group>";
+		};
+		6BA08D0116285DA400B3ED4A /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CF1162853FE00B3ED4A /* WebViewController.h */,
+				6BA08CF2162853FE00B3ED4A /* WebViewController.m */,
+				6BA08CF3162853FE00B3ED4A /* WebViewController_iPhone.xib */,
+			);
+			name = WebViewController;
+			sourceTree = "<group>";
+		};
+		6BA08D0216285DAE00B3ED4A /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CF61628543C00B3ED4A /* MapViewController.h */,
+				6BA08CF71628543D00B3ED4A /* MapViewController.m */,
+				6BA08CF81628543D00B3ED4A /* MapViewController_iPhone.xib */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
+		6BA08D0316285DC100B3ED4A /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08CD9162851F500B3ED4A /* ListViewController.h */,
+				6BA08CDA162851F500B3ED4A /* ListViewController.m */,
+				6BA08CDC162851F500B3ED4A /* ListViewController_iPhone.xib */,
+				6BA08CDF162851F500B3ED4A /* ListViewController_iPad.xib */,
+			);
+			name = ListViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BA08CC2162851F500B3ED4A /* ToDo-Liste */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BA08CE4162851F500B3ED4A /* Build configuration list for PBXNativeTarget "ToDo-Liste" */;
+			buildPhases = (
+				6BA08CBF162851F500B3ED4A /* Sources */,
+				6BA08CC0162851F500B3ED4A /* Frameworks */,
+				6BA08CC1162851F500B3ED4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ToDo-Liste";
+			productName = "ToDo-Liste";
+			productReference = 6BA08CC3162851F500B3ED4A /* ToDo-Liste.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BA08CBA162851F500B3ED4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 6BA08CBD162851F500B3ED4A /* Build configuration list for PBXProject "ToDo-Liste" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BA08CB8162851F500B3ED4A;
+			productRefGroup = 6BA08CC4162851F500B3ED4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BA08CC2162851F500B3ED4A /* ToDo-Liste */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BA08CC1162851F500B3ED4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BA08CD2162851F500B3ED4A /* InfoPlist.strings in Resources */,
+				6BA08CDE162851F500B3ED4A /* ListViewController_iPhone.xib in Resources */,
+				6BA08CE1162851F500B3ED4A /* ListViewController_iPad.xib in Resources */,
+				6BA08CEB1628532E00B3ED4A /* DetailViewController_iPhone.xib in Resources */,
+				6BA08CF0162853AB00B3ED4A /* CreateViewController_iPhone.xib in Resources */,
+				6BA08CF5162853FE00B3ED4A /* WebViewController_iPhone.xib in Resources */,
+				6BA08CFA1628543D00B3ED4A /* MapViewController_iPhone.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BA08CBF162851F500B3ED4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BA08CD4162851F500B3ED4A /* main.m in Sources */,
+				6BA08CD8162851F500B3ED4A /* AppDelegate.m in Sources */,
+				6BA08CDB162851F500B3ED4A /* ListViewController.m in Sources */,
+				6BA08CEA1628532E00B3ED4A /* DetailViewController.m in Sources */,
+				6BA08CEF162853AB00B3ED4A /* CreateViewController.m in Sources */,
+				6BA08CF4162853FE00B3ED4A /* WebViewController.m in Sources */,
+				6BA08CF91628543D00B3ED4A /* MapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6BA08CD0162851F500B3ED4A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BA08CD1162851F500B3ED4A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6BA08CDC162851F500B3ED4A /* ListViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BA08CDD162851F500B3ED4A /* en */,
+			);
+			name = ListViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		6BA08CDF162851F500B3ED4A /* ListViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BA08CE0162851F500B3ED4A /* en */,
+			);
+			name = ListViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BA08CE2162851F500B3ED4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6BA08CE3162851F500B3ED4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BA08CE5162851F500B3ED4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToDo-Liste/ToDo-Liste-Prefix.pch";
+				INFOPLIST_FILE = "ToDo-Liste/ToDo-Liste-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6BA08CE6162851F500B3ED4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToDo-Liste/ToDo-Liste-Prefix.pch";
+				INFOPLIST_FILE = "ToDo-Liste/ToDo-Liste-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BA08CBD162851F500B3ED4A /* Build configuration list for PBXProject "ToDo-Liste" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BA08CE2162851F500B3ED4A /* Debug */,
+				6BA08CE3162851F500B3ED4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BA08CE4162851F500B3ED4A /* Build configuration list for PBXNativeTarget "ToDo-Liste" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BA08CE5162851F500B3ED4A /* Debug */,
+				6BA08CE6162851F500B3ED4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BA08CBA162851F500B3ED4A /* Project object */;
+}
