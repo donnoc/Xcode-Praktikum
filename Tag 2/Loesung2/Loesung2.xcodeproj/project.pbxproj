@@ -107,7 +107,7 @@
 				757038F51628B592000F97C9 /* Article */,
 				757038F71628B599000F97C9 /* ArticleDetailView */,
 				757038F81628B5A4000F97C9 /* FeedSelection */,
-				757038F91628B5AD000F97C9 /* RssFeed */,
+				757038F91628B5AD000F97C9 /* Rss */,
 				757038FB1628B5C7000F97C9 /* WebView */,
 				6BA08D1A16285E3200B3ED4A /* Supporting Files */,
 			);
@@ -154,7 +154,7 @@
 			name = FeedSelection;
 			sourceTree = "<group>";
 		};
-		757038F91628B5AD000F97C9 /* RssFeed */ = {
+		757038F91628B5AD000F97C9 /* Rss */ = {
 			isa = PBXGroup;
 			children = (
 				6BA08D3A16285E7200B3ED4A /* RssFeed.h */,
@@ -162,7 +162,7 @@
 				6BA08D3C16285E7200B3ED4A /* RSSParser.h */,
 				6BA08D3D16285E7200B3ED4A /* RSSParser.m */,
 			);
-			name = RssFeed;
+			name = Rss;
 			sourceTree = "<group>";
 		};
 		757038FA1628B5BD000F97C9 /* ViewController */ = {

@@ -38,7 +38,7 @@
 		self.gps         = gps;
 	}
 	
-	NSLog(@"[Task] initialize Task");
+	NSLog([@"[Task] initialize Task: " stringByAppendingString:self.name]);
 	return self;
 }
 
