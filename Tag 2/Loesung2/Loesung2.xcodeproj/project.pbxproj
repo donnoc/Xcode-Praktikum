@@ -103,24 +103,12 @@
 			children = (
 				6BA08D3016285E7200B3ED4A /* AppDelegate.h */,
 				6BA08D3116285E7200B3ED4A /* AppDelegate.m */,
-				6BA08D3216285E7200B3ED4A /* Article.h */,
-				6BA08D3316285E7200B3ED4A /* Article.m */,
-				6BA08D3416285E7200B3ED4A /* ArticleDetailViewController.h */,
-				6BA08D3516285E7200B3ED4A /* ArticleDetailViewController.m */,
-				6BA08D3616285E7200B3ED4A /* ArticleDetailViewController.xib */,
-				6BA08D3716285E7200B3ED4A /* FeedSelectionViewController.h */,
-				6BA08D3816285E7200B3ED4A /* FeedSelectionViewController.m */,
-				6BA08D3916285E7200B3ED4A /* FeedSelectionViewController.xib */,
-				6BA08D3A16285E7200B3ED4A /* RssFeed.h */,
-				6BA08D3B16285E7200B3ED4A /* RssFeed.m */,
-				6BA08D3C16285E7200B3ED4A /* RSSParser.h */,
-				6BA08D3D16285E7200B3ED4A /* RSSParser.m */,
-				6BA08D3E16285E7200B3ED4A /* ViewController.h */,
-				6BA08D3F16285E7200B3ED4A /* ViewController.m */,
-				6BA08D4016285E7200B3ED4A /* ViewController.xib */,
-				6BA08D4116285E7200B3ED4A /* WebViewController.h */,
-				6BA08D4216285E7200B3ED4A /* WebViewController.m */,
-				6BA08D4316285E7200B3ED4A /* WebViewController.xib */,
+				757038FA1628B5BD000F97C9 /* ViewController */,
+				757038F51628B592000F97C9 /* Article */,
+				757038F71628B599000F97C9 /* ArticleDetailView */,
+				757038F81628B5A4000F97C9 /* FeedSelection */,
+				757038F91628B5AD000F97C9 /* RssFeed */,
+				757038FB1628B5C7000F97C9 /* WebView */,
 				6BA08D1A16285E3200B3ED4A /* Supporting Files */,
 			);
 			path = Loesung2;
@@ -135,6 +123,66 @@
 				6BA08D2116285E3200B3ED4A /* Loesung2-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		757038F51628B592000F97C9 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08D3216285E7200B3ED4A /* Article.h */,
+				6BA08D3316285E7200B3ED4A /* Article.m */,
+			);
+			name = Article;
+			sourceTree = "<group>";
+		};
+		757038F71628B599000F97C9 /* ArticleDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08D3416285E7200B3ED4A /* ArticleDetailViewController.h */,
+				6BA08D3516285E7200B3ED4A /* ArticleDetailViewController.m */,
+				6BA08D3616285E7200B3ED4A /* ArticleDetailViewController.xib */,
+			);
+			name = ArticleDetailView;
+			sourceTree = "<group>";
+		};
+		757038F81628B5A4000F97C9 /* FeedSelection */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08D3716285E7200B3ED4A /* FeedSelectionViewController.h */,
+				6BA08D3816285E7200B3ED4A /* FeedSelectionViewController.m */,
+				6BA08D3916285E7200B3ED4A /* FeedSelectionViewController.xib */,
+			);
+			name = FeedSelection;
+			sourceTree = "<group>";
+		};
+		757038F91628B5AD000F97C9 /* RssFeed */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08D3A16285E7200B3ED4A /* RssFeed.h */,
+				6BA08D3B16285E7200B3ED4A /* RssFeed.m */,
+				6BA08D3C16285E7200B3ED4A /* RSSParser.h */,
+				6BA08D3D16285E7200B3ED4A /* RSSParser.m */,
+			);
+			name = RssFeed;
+			sourceTree = "<group>";
+		};
+		757038FA1628B5BD000F97C9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08D3E16285E7200B3ED4A /* ViewController.h */,
+				6BA08D3F16285E7200B3ED4A /* ViewController.m */,
+				6BA08D4016285E7200B3ED4A /* ViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		757038FB1628B5C7000F97C9 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				6BA08D4116285E7200B3ED4A /* WebViewController.h */,
+				6BA08D4216285E7200B3ED4A /* WebViewController.m */,
+				6BA08D4316285E7200B3ED4A /* WebViewController.xib */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +362,7 @@
 				6BA08D2F16285E3200B3ED4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

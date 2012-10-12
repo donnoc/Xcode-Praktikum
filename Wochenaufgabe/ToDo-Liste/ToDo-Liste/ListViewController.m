@@ -7,8 +7,27 @@
 //
 
 #import "ListViewController.h"
+#import "Task.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 @implementation ListViewController
+
+- (ListViewController*) initWithNibName:nibName bundle:bundle
+{
+	self = [super initWithNibName:nibName bundle:bundle];
+	
+	Task* firstTask = [[Task alloc] initWithName:@"Der Name"
+										 andDate:@"21.02.2003"
+								  andDescription:@"Bla bla bla"
+										  andUrl:[[NSURL alloc] initFileURLWithPath:@"http://www.web.de"]
+										  andGps: CLLocationCoordinate2DMake(111, 222)
+					   ];
+
+	
+	return self;
+}
+	
 
 - (void)didReceiveMemoryWarning
 {

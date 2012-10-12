@@ -19,12 +19,22 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+	
+	// prove if iPhone or iPad
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+		// for iPhone initialize a viewController with Nib-File ListViewController_iPhone
         self.viewController = [[ListViewController alloc] initWithNibName:@"ListViewController_iPhone" bundle:nil];
     } else {
-        self.viewController = [[ListViewController alloc] initWithNibName:@"ListViewController_iPad" bundle:nil];
+		// for iPad initialize a viewController with Nib-File ListViewController_iPad
+		self.viewController = [[ListViewController alloc] initWithNibName:@"ListViewController_iPad" bundle:nil];
     }
-    self.window.rootViewController = self.viewController;
+	
+	
+	// initialize a UINavigationconroller and set RootViewController to the above selected one
+	UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+	
+	// set the root view Controller of the app
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -26,6 +26,8 @@
 		6BA08CFA1628543D00B3ED4A /* MapViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA08CF81628543D00B3ED4A /* MapViewController_iPhone.xib */; };
 		6BA08CFC16285B4300B3ED4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA08CFB16285B4300B3ED4A /* CoreLocation.framework */; };
 		6BA08CFE16285B6400B3ED4A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA08CFD16285B6400B3ED4A /* MapKit.framework */; };
+		757038EF16289932000F97C9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757038EE16289932000F97C9 /* Default-568h@2x.png */; };
+		757038FE1628B694000F97C9 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 757038FD1628B694000F97C9 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,9 @@
 		6BA08CF81628543D00B3ED4A /* MapViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController_iPhone.xib; sourceTree = "<group>"; };
 		6BA08CFB16285B4300B3ED4A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6BA08CFD16285B6400B3ED4A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		757038EE16289932000F97C9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		757038FC1628B694000F97C9 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		757038FD1628B694000F97C9 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BA08CFE16285B6400B3ED4A /* MapKit.framework in Frameworks */,
 				6BA08CFC16285B4300B3ED4A /* CoreLocation.framework in Frameworks */,
+				6BA08CFE16285B6400B3ED4A /* MapKit.framework in Frameworks */,
 				6BA08CC8162851F500B3ED4A /* UIKit.framework in Frameworks */,
 				6BA08CCA162851F500B3ED4A /* Foundation.framework in Frameworks */,
 				6BA08CCC162851F500B3ED4A /* CoreGraphics.framework in Frameworks */,
@@ -78,8 +83,6 @@
 		6BA08CB8162851F500B3ED4A = {
 			isa = PBXGroup;
 			children = (
-				6BA08CFD16285B6400B3ED4A /* MapKit.framework */,
-				6BA08CFB16285B4300B3ED4A /* CoreLocation.framework */,
 				6BA08CCD162851F500B3ED4A /* ToDo-Liste */,
 				6BA08CC6162851F500B3ED4A /* Frameworks */,
 				6BA08CC4162851F500B3ED4A /* Products */,
@@ -97,6 +100,8 @@
 		6BA08CC6162851F500B3ED4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BA08CFD16285B6400B3ED4A /* MapKit.framework */,
+				6BA08CFB16285B4300B3ED4A /* CoreLocation.framework */,
 				6BA08CC7162851F500B3ED4A /* UIKit.framework */,
 				6BA08CC9162851F500B3ED4A /* Foundation.framework */,
 				6BA08CCB162851F500B3ED4A /* CoreGraphics.framework */,
@@ -109,11 +114,12 @@
 			children = (
 				6BA08CD6162851F500B3ED4A /* AppDelegate.h */,
 				6BA08CD7162851F500B3ED4A /* AppDelegate.m */,
+				6BA08D0316285DC100B3ED4A /* ListViewController */,
 				6BA08CFF16285D8600B3ED4A /* DetailViewController */,
 				6BA08D0016285D9800B3ED4A /* CreateViewController */,
 				6BA08D0116285DA400B3ED4A /* WebViewController */,
 				6BA08D0216285DAE00B3ED4A /* MapViewController */,
-				6BA08D0316285DC100B3ED4A /* ListViewController */,
+				757038FF1628B699000F97C9 /* Task */,
 				6BA08CCE162851F500B3ED4A /* Supporting Files */,
 			);
 			path = "ToDo-Liste";
@@ -122,6 +128,7 @@
 		6BA08CCE162851F500B3ED4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				757038EE16289932000F97C9 /* Default-568h@2x.png */,
 				6BA08CCF162851F500B3ED4A /* ToDo-Liste-Info.plist */,
 				6BA08CD0162851F500B3ED4A /* InfoPlist.strings */,
 				6BA08CD3162851F500B3ED4A /* main.m */,
@@ -181,6 +188,15 @@
 			name = ListViewController;
 			sourceTree = "<group>";
 		};
+		757038FF1628B699000F97C9 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				757038FC1628B694000F97C9 /* Task.h */,
+				757038FD1628B694000F97C9 /* Task.m */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +254,7 @@
 				6BA08CF0162853AB00B3ED4A /* CreateViewController_iPhone.xib in Resources */,
 				6BA08CF5162853FE00B3ED4A /* WebViewController_iPhone.xib in Resources */,
 				6BA08CFA1628543D00B3ED4A /* MapViewController_iPhone.xib in Resources */,
+				757038EF16289932000F97C9 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +272,7 @@
 				6BA08CEF162853AB00B3ED4A /* CreateViewController.m in Sources */,
 				6BA08CF4162853FE00B3ED4A /* WebViewController.m in Sources */,
 				6BA08CF91628543D00B3ED4A /* MapViewController.m in Sources */,
+				757038FE1628B694000F97C9 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +394,7 @@
 				6BA08CE6162851F500B3ED4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
