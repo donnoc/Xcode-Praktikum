@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Task.h"
 
+//@class Task;
+//@protocol CreateViewControllerDelegate;
+
+
+
+
 
 @interface CreateViewController : UIViewController
 
@@ -19,6 +25,9 @@
 @property (nonatomic, strong) IBOutlet UIDatePicker* datePicker;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem* saveDateButton;
 
+@property (nonatomic, weak) id delegate;
+
+
 
 -(IBAction)clickGpsButton:(id)sender;
 -(IBAction)clickDateButton:(id)sender;
@@ -27,3 +36,11 @@
 -(IBAction)clickSaveButton:(id)sender;
 
 @end
+
+
+
+//@protocol FeedSelectionViewControllerDelegate
+
+//- (void)createViewController:(CreateViewController *)createViewController didCreatedTask:(Task *)task;
+
+//@end

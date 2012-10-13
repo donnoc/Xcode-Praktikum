@@ -12,6 +12,11 @@
 @interface ListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
+
 - (void) jumpToCreateViewController;
+
+- (void)createViewController:(CreateViewController *)createViewController
+			  didCreatedTask:(Task *)task;
+
 
 @end

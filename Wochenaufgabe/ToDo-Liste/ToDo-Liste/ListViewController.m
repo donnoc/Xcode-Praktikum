@@ -141,10 +141,14 @@
 - (void) jumpToCreateViewController
 {
 	CreateViewController* createViewController = [[CreateViewController alloc] initWithNibName:@"CreateViewController_iPhone" bundle:nil];
-	
+	createViewController.delegate = self;
 	[self.navigationController pushViewController:createViewController animated:YES];
 }
 
+
+-(void)createViewController:(CreateViewController *)createViewController didCreatedTask:(Task *)task {
+	NSLog(@"Du hast einen Task erstellt, mit dem Namen : %@", task.name);
+}
 
 - (void)viewDidUnload
 {

@@ -15,6 +15,7 @@
 @synthesize infos = _infos;
 @synthesize datePicker = _datePicker;
 @synthesize saveDateButton = _saveDateButton;
+@synthesize delegate = _delegate;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -63,11 +64,15 @@
 
 -(void)clickSaveButton:(id)sender
 {
+	NSLog(@"%@", self.delegate);
 	Task* newTask = [[Task alloc] initWithName:[_name text]
 									   andDate:_datum.titleLabel.text
 								andDescription:[_infos text]
 										andUrl:[NSURL URLWithString:[_homepage text]]
-										andGps:CLLocationCoordinate2DMake(53.5990,9.9325)];
+										andGps:CLLocationCoordinate2DMake(53.5990,9.9325)];	
+	
+	[self.delegate createViewController:self didCreatedTask:newTask];
+
 }
 
 #pragma mark - View lifecycle
