@@ -8,7 +8,31 @@
 
 #import "MapViewController.h"
 
+@interface MapViewController()
+
+@property CLLocationCoordinate2D location;
+
+@end
+
+
 @implementation MapViewController
+
+@synthesize location = _location;
+
+
+- (id) initWithLocationCoordinate:(CLLocationCoordinate2D)location
+{
+	self = [super initWithNibName:@"MapViewController_iPhone" bundle:nil];
+	
+	if (self) {
+		self.location = location;
+	}
+	
+	NSLog(@"[MapViewController] Initialisiere Map mit Coordinaten %f", self.location.latitude);
+	
+	return self;
+	
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +57,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+	[_mapView setCenterCoordinate:self.location];
 }
 
 - (void)viewDidUnload

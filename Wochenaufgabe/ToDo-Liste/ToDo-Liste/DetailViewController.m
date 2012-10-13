@@ -75,7 +75,17 @@
 	[_name setText:self.detailTask.name];
 	[_datum setText:self.detailTask.date];
 	[_infos setText:self.detailTask.description];
+	
+	UIBarButtonItem* goToMapButton = [[UIBarButtonItem alloc] initWithTitle:@"Standort" style:UIBarButtonItemStyleBordered target:self action:@selector(showMapCreate)];
+	self.navigationItem.rightBarButtonItem = goToMapButton;
 }
+
+-(void) showMapCreate{
+	NSLog(@"Zeitg die Map an");
+	MapViewController* mapViewController = [[MapViewController alloc] initWithLocationCoordinate:self.detailTask.gps];
+    [self.navigationController pushViewController: mapViewController animated:YES];
+}
+
 
 
 - (void)viewDidUnload

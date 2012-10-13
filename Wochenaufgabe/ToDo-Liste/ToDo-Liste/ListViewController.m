@@ -32,7 +32,7 @@
 										 andDate:@"21.02.2003"
 								  andDescription:@"Bla bla bla"
 										  andUrl:[[NSURL alloc] initWithString:@"http://www.web.de"]
-										  andGps:CLLocationCoordinate2DMake(111, 222)
+										  andGps:CLLocationCoordinate2DMake(37.0625,95.677068)
 					   ];
 	Task* secondTask = [[Task alloc] initWithName:@"ein anderer Name"
 										  andDate:@"09.02.2003"

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Task.h"
 #import "WebViewController.h"
-
+#import "MapViewController.h"
 
 @interface DetailViewController : UIViewController
 
@@ -19,6 +19,7 @@
 
 
 -(DetailViewController*) initWithTask:(Task*) singleTask;
+-(void) showMapCreate;
 
 -(IBAction)clickHomepageButton:(id)sender;
 
