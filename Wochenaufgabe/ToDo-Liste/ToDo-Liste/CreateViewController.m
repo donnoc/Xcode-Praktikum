@@ -26,6 +26,11 @@
     return self;
 }
 
+- (void) dismissKeyboard: (UITextField*) aTextField
+{
+    [aTextField resignFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -56,7 +61,14 @@
 	NSLog(@"Datum wurde mit Wert %@ geklickt", [_datePicker date]);
 }
 
-
+-(void)clickSaveButton:(id)sender
+{
+	Task* newTask = [[Task alloc] initWithName:[_name text]
+									   andDate:_datum.titleLabel.text
+								andDescription:[_infos text]
+										andUrl:[NSURL URLWithString:[_homepage text]]
+										andGps:CLLocationCoordinate2DMake(53.5990,9.9325)];
+}
 
 #pragma mark - View lifecycle
 

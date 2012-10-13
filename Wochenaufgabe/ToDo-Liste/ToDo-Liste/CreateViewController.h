@@ -23,5 +23,7 @@
 -(IBAction)clickGpsButton:(id)sender;
 -(IBAction)clickDateButton:(id)sender;
 -(IBAction)clickSaveDateButton:(id)sender;
+-(IBAction)dismissKeyboard:(UITextField*)aTextField;
+-(IBAction)clickSaveButton:(id)sender;
 
 @end
