@@ -11,7 +11,7 @@
 
 @interface ListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-
+@property (nonatomic, strong) IBOutlet UITableView* tableView;
 
 - (void) jumpToCreateViewController;
 

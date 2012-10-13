@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Task.h"
 
-//@class Task;
-//@protocol CreateViewControllerDelegate;
+@class Task;
+@protocol CreateViewControllerDelegate;
 
 
 
@@ -25,7 +25,7 @@
 @property (nonatomic, strong) IBOutlet UIDatePicker* datePicker;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem* saveDateButton;
 
-@property (nonatomic, weak) id delegate;
+@property (nonatomic, weak) id<CreateViewControllerDelegate> delegate;
 
 
 
@@ -39,8 +39,8 @@
 
 
 
-//@protocol FeedSelectionViewControllerDelegate
+@protocol CreateViewControllerDelegate
 
-//- (void)createViewController:(CreateViewController *)createViewController didCreatedTask:(Task *)task;
+- (void)createViewController:(CreateViewController *)createViewController didCreatedTask:(Task *)task;
 
-//@end
+@end

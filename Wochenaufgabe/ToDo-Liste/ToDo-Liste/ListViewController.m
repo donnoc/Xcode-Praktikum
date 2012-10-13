@@ -10,7 +10,7 @@
 #import "Task.h"
 #import "DetailViewController.h"
 
-@interface ListViewController()
+@interface ListViewController() <CreateViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray* listOfTasks;
 
@@ -20,6 +20,7 @@
 @implementation ListViewController
 
 @synthesize listOfTasks = _listOfTasks;
+@synthesize tableView = _tableView;
 
 
 
@@ -148,7 +149,23 @@
 
 -(void)createViewController:(CreateViewController *)createViewController didCreatedTask:(Task *)task {
 	NSLog(@"Du hast einen Task erstellt, mit dem Namen : %@", task.name);
+	
+	
+	NSMutableArray* editableListOfTasks = [self.listOfTasks mutableCopy];
+	
+	[editableListOfTasks addObject:task];
+	
+	self.listOfTasks = [editableListOfTasks copy];
+		
+	[self.tableView reloadData];
+	
+	[self.navigationController popToRootViewControllerAnimated:YES];
+	
 }
+
+
+
+
 
 - (void)viewDidUnload
 {
