@@ -8,7 +8,39 @@
 
 #import "DetailViewController.h"
 
+@interface DetailViewController()
+
+@property (nonatomic, strong) Task* detailTask;
+
+@end
+
+
+
 @implementation DetailViewController
+
+
+@synthesize detailTask = _detailTask;
+@synthesize name = _name;
+@synthesize datum = _datum;
+@synthesize infos = _infos;
+
+
+
+-(DetailViewController*) initWithTask:(Task*) singleTask
+{
+	self = [super init];
+	
+	self = [self initWithNibName:@"DetailViewController_iPhone" bundle:nil];
+	
+	NSLog(@"[DetailViewController] initialisiere mit Task %@ ", singleTask.name);
+	
+	if (self) {
+		self.detailTask = singleTask;
+	}
+	return self;
+	
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -18,6 +50,13 @@
     }
     return self;
 }
+
+-(void)clickHomepageButton:(id)sender
+{
+	WebViewController* derViewController = [[WebViewController alloc] initWithUrl:self.detailTask.url];
+    [self.navigationController pushViewController: derViewController animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -33,7 +72,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	[_name setText:self.detailTask.name];
+	[_datum setText:self.detailTask.date];
+	[_infos setText:self.detailTask.description];
 }
+
 
 - (void)viewDidUnload
 {

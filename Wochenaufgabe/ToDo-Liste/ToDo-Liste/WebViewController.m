@@ -8,7 +8,35 @@
 
 #import "WebViewController.h"
 
+
+@interface WebViewController()
+
+@property (nonatomic, strong) NSURL* url;
+
+@end
+
+
 @implementation WebViewController
+
+@synthesize url = _url;
+@synthesize webViewWindow = _webViewWindow;
+
+
+-(WebViewController*) initWithUrl:(NSURL*)url
+{
+	self =[super init];
+	self = [super initWithNibName:@"WebViewController_iPhone" bundle:nil];
+	
+	if (self) {
+		self.url = url;
+	}
+	
+	NSLog(@"Initialisiere Webview mit URL: %@", self.url);
+	
+	return self;
+}
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +61,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+	NSURLRequest* urlRequest = [NSURLRequest requestWithURL:self.url];
+    [_webViewWindow loadRequest: urlRequest];
 }
 
 - (void)viewDidUnload

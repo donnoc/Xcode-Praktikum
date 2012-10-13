@@ -31,14 +31,14 @@
 	Task* firstTask = [[Task alloc] initWithName:@"Der Name"
 										 andDate:@"21.02.2003"
 								  andDescription:@"Bla bla bla"
-										  andUrl:[[NSURL alloc] initFileURLWithPath:@"http://www.web.de"]
-										  andGps: CLLocationCoordinate2DMake(111, 222)
+										  andUrl:[[NSURL alloc] initWithString:@"http://www.web.de"]
+										  andGps:CLLocationCoordinate2DMake(111, 222)
 					   ];
 	Task* secondTask = [[Task alloc] initWithName:@"ein anderer Name"
 										  andDate:@"09.02.2003"
 								   andDescription:@"Blubb blubb blubb"
-										   andUrl:[[NSURL alloc] initFileURLWithPath:@"http://www.gmx.de"]
-										   andGps: CLLocationCoordinate2DMake(999, 999)
+										   andUrl:[[NSURL alloc] initWithString:@"http://www.gmx.de"]
+										   andGps:CLLocationCoordinate2DMake(999, 999)
 					   ];
 	
 	
@@ -48,7 +48,7 @@
 	 * have to add in Mutable array and copy in normal-Array
 	 * or the count funktion will not work
 	 */
-	// initialize an MutableArray
+	// initialize an MutableArray (array which can be edit)
 	NSMutableArray* tempListOfTasks = [[NSMutableArray alloc] init];
 	// add the Tasks to the MutableArray
 	[tempListOfTasks addObject:firstTask];
@@ -108,13 +108,10 @@
  */
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-//        DetailViewController* detailViewController = [[DetailViewController alloc] initWithArticle:[self.rssArtikel objectAtIndex:indexPath.row]];
-//        [self.navigationController pushViewController: derViewController animated:YES];
-    } else {
-//        self.iPadDetailsController.derArtikel = [self.rssArtikel objectAtIndex:indexPath.row];
-//        [self.iPadDetailsController.navigationController popToRootViewControllerAnimated:YES];
-    }
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	DetailViewController* detailViewController = [[DetailViewController alloc] initWithTask:[self.listOfTasks objectAtIndex:indexPath.row]];
+	[self.navigationController pushViewController: detailViewController animated:YES];
+
 }
 
 
