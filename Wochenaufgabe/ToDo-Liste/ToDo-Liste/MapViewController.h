@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "AddressAnnotation.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 

@@ -28,6 +28,7 @@
 		6BA08CFE16285B6400B3ED4A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA08CFD16285B6400B3ED4A /* MapKit.framework */; };
 		757038EF16289932000F97C9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757038EE16289932000F97C9 /* Default-568h@2x.png */; };
 		757038FE1628B694000F97C9 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 757038FD1628B694000F97C9 /* Task.m */; };
+		7570390616297AF8000F97C9 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7570390516297AF8000F97C9 /* AddressAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		757038EE16289932000F97C9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		757038FC1628B694000F97C9 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		757038FD1628B694000F97C9 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		7570390416297AF8000F97C9 /* AddressAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressAnnotation.h; sourceTree = "<group>"; };
+		7570390516297AF8000F97C9 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,7 @@
 				6BA08CF61628543C00B3ED4A /* MapViewController.h */,
 				6BA08CF71628543D00B3ED4A /* MapViewController.m */,
 				6BA08CF81628543D00B3ED4A /* MapViewController_iPhone.xib */,
+				7570390716297AFC000F97C9 /* AddressAnnotation */,
 			);
 			name = MapViewController;
 			sourceTree = "<group>";
@@ -195,6 +199,15 @@
 				757038FD1628B694000F97C9 /* Task.m */,
 			);
 			name = Task;
+			sourceTree = "<group>";
+		};
+		7570390716297AFC000F97C9 /* AddressAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				7570390416297AF8000F97C9 /* AddressAnnotation.h */,
+				7570390516297AF8000F97C9 /* AddressAnnotation.m */,
+			);
+			name = AddressAnnotation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +286,7 @@
 				6BA08CF4162853FE00B3ED4A /* WebViewController.m in Sources */,
 				6BA08CF91628543D00B3ED4A /* MapViewController.m in Sources */,
 				757038FE1628B694000F97C9 /* Task.m in Sources */,
+				7570390616297AF8000F97C9 /* AddressAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

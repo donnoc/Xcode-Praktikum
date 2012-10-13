@@ -58,7 +58,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	[_mapView setCenterCoordinate:self.location];
+	//[_mapView setCenterCoordinate:self.location];
+	
+	
+	MKCoordinateRegion region;
+	MKCoordinateSpan span;
+	span.latitudeDelta=0.5;
+	span.longitudeDelta=0.5;
+
+	region.span=span;
+	region.center=self.location;
+	
+	
+	[_mapView setRegion:MKCoordinateRegionMake(self.location, span)];
+	
+	AddressAnnotation* annotation = [[AddressAnnotation alloc] initWithCoordinate:self.location];
+	[_mapView addAnnotation:annotation];
 }
 
 - (void)viewDidUnload
