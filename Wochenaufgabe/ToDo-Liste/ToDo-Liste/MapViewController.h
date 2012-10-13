@@ -10,12 +10,13 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "AddressAnnotation.h"
+#import "MapViewAnnotation.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) IBOutlet MKMapView* mapView;
 
-- (MapViewController*) initWithLocationCoordinate:(CLLocationCoordinate2D)location;
+- (MapViewController*) initWithLocationCoordinate:(CLLocationCoordinate2D)location andName:(NSString*)name;
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view;

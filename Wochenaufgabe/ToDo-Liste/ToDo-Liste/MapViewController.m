@@ -11,6 +11,7 @@
 @interface MapViewController()
 
 @property CLLocationCoordinate2D location;
+@property NSString* name;
 
 @end
 
@@ -18,14 +19,16 @@
 @implementation MapViewController
 
 @synthesize location = _location;
+@synthesize name = _name;
 
 
-- (id) initWithLocationCoordinate:(CLLocationCoordinate2D)location
+- (id) initWithLocationCoordinate:(CLLocationCoordinate2D)location andName:(NSString*)name
 {
 	self = [super initWithNibName:@"MapViewController_iPhone" bundle:nil];
 	
 	if (self) {
 		self.location = location;
+		self.name = name;
 	}
 	
 	NSLog(@"[MapViewController] Initialisiere Map mit Coordinaten %f", self.location.latitude);
@@ -66,10 +69,13 @@
 	// navigate the map center to coordinates
 	[_mapView setRegion:MKCoordinateRegionMake(self.location, span)];
 	
-	// add a red pin to location
-	AddressAnnotation* annotation = [[AddressAnnotation alloc] initWithCoordinate:self.location];
-
-	[_mapView addAnnotation:annotation];
+//	// add a red pin to location
+//	AddressAnnotation* annotation = [[AddressAnnotation alloc] initWithCoordinate:self.location];
+//	[_mapView addAnnotation:annotation];
+	NSLog(@"Der name für den Pin ist: %@", self.name);
+	// Add the annotation to our map view
+	MapViewAnnotation* newAnnotation = [[MapViewAnnotation alloc] initWithTitle:self.name andCoordinate:self.location];
+	[self.mapView addAnnotation:newAnnotation];
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view

@@ -82,7 +82,7 @@
 
 -(void) showMapCreate{
 	NSLog(@"Zeigt die Map an");
-	MapViewController* mapViewController = [[MapViewController alloc] initWithLocationCoordinate:self.detailTask.gps];
+	MapViewController* mapViewController = [[MapViewController alloc] initWithLocationCoordinate:self.detailTask.gps andName:self.name.text];
     [self.navigationController pushViewController: mapViewController animated:YES];
 }
 

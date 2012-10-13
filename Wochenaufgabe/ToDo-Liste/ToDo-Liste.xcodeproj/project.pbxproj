@@ -29,6 +29,7 @@
 		757038EF16289932000F97C9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 757038EE16289932000F97C9 /* Default-568h@2x.png */; };
 		757038FE1628B694000F97C9 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 757038FD1628B694000F97C9 /* Task.m */; };
 		7570390616297AF8000F97C9 /* AddressAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7570390516297AF8000F97C9 /* AddressAnnotation.m */; };
+		757039C61629B548000F97C9 /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 757039C51629B548000F97C9 /* MapViewAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,8 @@
 		757038FD1628B694000F97C9 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		7570390416297AF8000F97C9 /* AddressAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressAnnotation.h; sourceTree = "<group>"; };
 		7570390516297AF8000F97C9 /* AddressAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressAnnotation.m; sourceTree = "<group>"; };
+		757039C41629B548000F97C9 /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
+		757039C51629B548000F97C9 /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,7 @@
 				6BA08CF61628543C00B3ED4A /* MapViewController.h */,
 				6BA08CF71628543D00B3ED4A /* MapViewController.m */,
 				6BA08CF81628543D00B3ED4A /* MapViewController_iPhone.xib */,
+				757039C71629B54F000F97C9 /* MapViewAnnotation */,
 				7570390716297AFC000F97C9 /* AddressAnnotation */,
 			);
 			name = MapViewController;
@@ -208,6 +212,15 @@
 				7570390516297AF8000F97C9 /* AddressAnnotation.m */,
 			);
 			name = AddressAnnotation;
+			sourceTree = "<group>";
+		};
+		757039C71629B54F000F97C9 /* MapViewAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				757039C41629B548000F97C9 /* MapViewAnnotation.h */,
+				757039C51629B548000F97C9 /* MapViewAnnotation.m */,
+			);
+			name = MapViewAnnotation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +300,7 @@
 				6BA08CF91628543D00B3ED4A /* MapViewController.m in Sources */,
 				757038FE1628B694000F97C9 /* Task.m in Sources */,
 				7570390616297AF8000F97C9 /* AddressAnnotation.m in Sources */,
+				757039C61629B548000F97C9 /* MapViewAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
