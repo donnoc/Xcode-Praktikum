@@ -58,22 +58,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
-	//[_mapView setCenterCoordinate:self.location];
-	
-	
-	MKCoordinateRegion region;
+	// define zoom lvl
 	MKCoordinateSpan span;
-	span.latitudeDelta=0.5;
-	span.longitudeDelta=0.5;
+	span.latitudeDelta=0.02;
+	span.longitudeDelta=0.02;
 
-	region.span=span;
-	region.center=self.location;
-	
-	
+	// navigate the map center to coordinates
 	[_mapView setRegion:MKCoordinateRegionMake(self.location, span)];
 	
+	// add a red pin to location
 	AddressAnnotation* annotation = [[AddressAnnotation alloc] initWithCoordinate:self.location];
+
 	[_mapView addAnnotation:annotation];
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+	NSLog(@"Auf den Pin geklickt");
+	
+}
+
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
+{
+	
 }
 
 - (void)viewDidUnload

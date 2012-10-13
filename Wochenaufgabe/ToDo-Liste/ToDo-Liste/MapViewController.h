@@ -17,4 +17,7 @@
 
 - (MapViewController*) initWithLocationCoordinate:(CLLocationCoordinate2D)location;
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view;
+
 @end

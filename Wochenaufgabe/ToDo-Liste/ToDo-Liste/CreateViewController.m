@@ -10,6 +10,13 @@
 
 @implementation CreateViewController
 
+@synthesize name = _name;
+@synthesize datum = _datum;
+@synthesize infos = _infos;
+@synthesize datePicker = _datePicker;
+@synthesize saveDateButton = _saveDateButton;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,12 +34,37 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+-(void)clickGpsButton:(id)sender{
+	
+}
+
+-(void)clickDateButton:(id)sender{
+	NSLog(@"Datebutton wurde geklickt");
+
+	[_saveDateButton setEnabled:YES];
+	[_datePicker setHidden: NO];
+  
+}
+
+-(void)clickSaveDateButton:(id)sender
+{
+	[_saveDateButton setEnabled:NO];
+	[_datePicker setHidden: YES];
+	
+	[_datum setTitle:[[_datePicker date] description] forState:UIControlStateNormal];
+	
+	NSLog(@"Datum wurde mit Wert %@ geklickt", [_datePicker date]);
+}
+
+
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
 }
 
 - (void)viewDidUnload
@@ -47,5 +79,6 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 @end

@@ -28,16 +28,16 @@
 	self = [super initWithNibName:nibName bundle:bundle];
 	
 	//initialize two default Tasks
-	Task* firstTask = [[Task alloc] initWithName:@"Der Name"
-										 andDate:@"21.02.2003"
-								  andDescription:@"Bla bla bla"
-										  andUrl:[[NSURL alloc] initWithString:@"http://www.web.de"]
-										  andGps:CLLocationCoordinate2DMake(37.0625,-95.677068)
+	Task* firstTask = [[Task alloc] initWithName:@"Informatikum"
+										 andDate:@"30.10.2012"
+								  andDescription:@"Vortrag in Gebäude D"
+										  andUrl:[[NSURL alloc] initWithString:@"http://www.informatik.uni-hamburg.de/Info/Campus/"]
+										  andGps:CLLocationCoordinate2DMake(53.5990,9.9325)
 					   ];
-	Task* secondTask = [[Task alloc] initWithName:@"ein anderer Name"
-										  andDate:@"09.02.2003"
-								   andDescription:@"Blubb blubb blubb"
-										   andUrl:[[NSURL alloc] initWithString:@"http://www.gmx.de"]
+	Task* secondTask = [[Task alloc] initWithName:@"Bäckerei Dreyer"
+										  andDate:@"09.11.2012"
+								   andDescription:@"Brötchen kaufen"
+										   andUrl:[[NSURL alloc] initWithString:@"http://www.kaffee-partner.de/kaffee_vielfalt/genuss/fuer_backereien.html?s=25&gclid=CPzT7J7r_bICFaTJtAodVTYA1w"]
 										   andGps:CLLocationCoordinate2DMake(53.694722222222,10.34861111111149)
 					   ];
 	
@@ -131,7 +131,20 @@
 	// set the View Title
 	self.title = @"ToDo Liste";
 	
+	
+	UIBarButtonItem* createTaskButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStyleBordered target:self action:@selector(jumpToCreateViewController)] ;
+	self.navigationItem.rightBarButtonItem = createTaskButton;
+	
 }
+
+
+- (void) jumpToCreateViewController
+{
+	CreateViewController* createViewController = [[CreateViewController alloc] initWithNibName:@"CreateViewController_iPhone" bundle:nil];
+	
+	[self.navigationController pushViewController:createViewController animated:YES];
+}
+
 
 - (void)viewDidUnload
 {
